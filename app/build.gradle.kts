@@ -50,6 +50,14 @@ dependencies {
     ksp(libs.room.compiler)
     implementation(kotlin("test"))
     testImplementation(libs.junit)
+    // The ViewModel + lifecycle
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    // The Retrofit (API)
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.gson)
+    // My WorkManager
+    implementation(libs.androidx.work.runtime.ktx)
 
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
