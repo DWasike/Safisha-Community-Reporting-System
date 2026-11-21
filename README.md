@@ -57,6 +57,40 @@ The main architectural components include:
 - **Repository Layer:** Provides a consistent interface for data operations.
 - **Data Layer:** Uses Room and SQLite for local persistence.
 
+## Project File Structure
+
+```text
+Safisha/
+├── app/
+│   ├── build.gradle.kts
+│   ├── schemas/              # Room database schemas
+│   └── src/
+│       ├── androidTest/      # Instrumentation & DAO tests
+│       ├── main/
+│       │   ├── AndroidManifest.xml
+│       │   ├── java/com/example/safisha/
+│       │   │   ├── MainActivity.kt
+│       │   │   ├── SafishaApp.kt
+│       │   │   ├── data/
+│       │   │   │   ├── local/          # Room Database, Entities, DAOs
+│       │   │   │   ├── remote/         # Retrofit API clients & endpoints
+│       │   │   │   └── repository/     # Repositories (SafishaRepository, WeatherRepository)
+│       │   │   ├── domain/
+│       │   │   │   └── model/          # Domain models (IssueCategory, ReportStatus, etc.)
+│       │   │   ├── util/
+│       │   │   │   ├── PasswordHasher.kt
+│       │   │   │   └── viewmodel/      # SafishaViewModel & UiState
+│       │   │   └── worker/             # WorkManager background workers & notifications
+│       │   ├── keepRules/          # ProGuard / R8 rules
+│       │   ├── res/                # XML Layouts, values, drawables, mipmaps
+│       │   └── xml/                # App backup & data extraction rules
+│       └── test/             # Unit tests
+├── build.gradle.kts
+├── gradle.properties
+├── settings.gradle.kts
+└── README.md
+```
+
 ## Project Scope
 
 Safisha focuses on community-based environmental and infrastructure reporting, report management, and status tracking. It is designed as a centralized platform that supports communication and accountability between residents and administrators.
