@@ -2,4 +2,20 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Safisha palette: Fresh Teal -->
+    <color name="safisha_primary">#00796B</color>
+    <color name="safisha_primary_dark">#004D40</color>
+    <color name="safisha_primary_container">#B2DFDB</color>
+    <color name="safisha_accent">#FFB300</color>
+    <color name="safisha_background">#F4FAF9</color>
+    <color name="safisha_surface">#FFFFFF</color>
+    <color name="safisha_text">#1F2D2B</color>
+    <color name="safisha_text_secondary">#5F6F6C</color>
+    <color name="safisha_error">#DC2626</color>
+
+    <!-- Status badges (shared with Member 4) -->
+    <color name="status_pending">#EF6C00</color>
+    <color name="status_in_progress">#2563EB</color>
+    <color name="status_resolved">#2E7D32</color>
 </resources>
