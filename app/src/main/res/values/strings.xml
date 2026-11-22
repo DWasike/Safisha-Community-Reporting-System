@@ -1,4 +1,26 @@
 <resources>
+    <string name="weather_title">Nairobi weather</string>
+    <string name="weather_loading">Loading weather…</string>
+    <string name="weather_temp_desc">%1$.0f°C · %2$s</string>
+    <string name="weather_details">Rain: %1$.1f mm · Wind: %2$.0f km/h</string>
+    <string name="weather_retry">Retry</string>
+    <string name="card_report_title">Report a problem</string>
+    <string name="card_report_sub">Spotted a pothole, a broken light or a leak? Tell us.</string>
+    <string name="card_my_reports">My reports</string>
+    <string name="card_my_reports_sub">Track the status of what you have reported</string>
+    <string name="card_all_reports">All reports</string>
+    <string name="card_all_reports_sub">Review and manage community reports</string>
+    <string name="report_title">Report a problem</string>
+    <string name="hint_category">Category</string>
+    <string name="hint_location">Location (street, estate or landmark)</string>
+    <string name="hint_description">Describe the problem</string>
+    <string name="action_submit">Submit report</string>
+    <string name="action_back">Back</string>
+    <string name="error_category_required">Please choose a category</string>
+    <string name="error_location_required">Location is required</string>
+    <string name="error_location_short">Enter a more specific location</string>
+    <string name="error_description_required">Description is required</string>
+    <string name="error_description_short">Please describe the problem in at least 10 characters</string>
     <string name="app_name">Safisha</string>
     <string name="tagline">Report it. Track it. Get it fixed.</string>
     <string name="register_title">Create your account</string>

@@ -36,6 +36,29 @@
             app:destination="@id/loginFragment"
             app:popUpTo="@id/dashboardFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_reportIssueFragment"
+            app:destination="@id/reportIssueFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_reportsPlaceholderFragment"
+            app:destination="@id/reportsPlaceholderFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/reportIssueFragment"
+        android:name="com.example.safisha.ui.auth.ReportIssueFragment"
+        android:label="Report a problem"
+        tools:layout="@layout/fragment_report_issue" />
+
+    <!-- Temporary: replace with Member 4's list fragment once merged -->
+    <fragment
+        android:id="@+id/reportsPlaceholderFragment"
+        android:name="com.example.safisha.ui.auth.ReportsPlaceholderFragment"
+        android:label="Reports">
+        <argument
+            android:name="showAll"
+            android:defaultValue="false"
+            app:argType="boolean" />
     </fragment>
 
 </navigation>
