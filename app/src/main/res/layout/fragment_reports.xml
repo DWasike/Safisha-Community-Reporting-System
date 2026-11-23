@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/reportsRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F7FA"
+    android:padding="16dp">
+
+    <!-- Screen heading -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SAFISHA"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#16834A"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Community Reports"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#202020"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View reported community problems and their progress."
+        android:textSize="14sp"
+        android:textColor="#777777"
+        android:layout_marginTop="5dp"/>
+
+    <!-- Report filters -->
+    <HorizontalScrollView
+        android:id="@+id/filterContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginTop="18dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All"/>
+
+            <Button
+                android:id="@+id/btnPending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pending"/>
+
+            <Button
+                android:id="@+id/btnInProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In Progress"/>
+
+            <Button
+                android:id="@+id/btnResolved"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resolved"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Loading indicator -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"/>
+
+    <!-- Empty state -->
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No community reports available yet."
+        android:textSize="15sp"
+        android:textColor="#777777"
+        android:gravity="center"
+        android:padding="24dp"
+        android:visibility="gone"/>
+
+    <!-- Error state -->
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Could not load reports."
+        android:textSize="14sp"
+        android:textColor="#B00020"
+        android:gravity="center"
+        android:padding="16dp"
+        android:visibility="gone"/>
+
+    <!-- Dynamic reports list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerReports"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="12dp"
+        android:clipToPadding="false"
+        android:paddingBottom="12dp"/>
+
+</LinearLayout>
